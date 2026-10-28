@@ -1,0 +1,20 @@
+<html>
+<head>
+<style>
+  .note { color: #336699; font: italic bold 14px/20px Georgia, serif; border: 1px solid #ccc; }
+  a:hover { color: red; }
+  @media (max-width: 600px) { .note { font-size: 12px !important; } }
+  td.wide { width: 300px; background: #eeeeee url("bg.png") no-repeat; }
+  #special { padding: 4px 8px 4px 8px; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <p class="note">Styled by the page's own style tag.</p>
+    <p class="note" style="font-size: 18px !important">Inline important.</p>
+    <table><tr><td class="wide" style="vertical-align: top">Wide cell</td></tr></table>
+    <div id="special">Special</div>
+    <a href="https://example.com">Hover me</a>
+  </div>
+</body>
+</html>

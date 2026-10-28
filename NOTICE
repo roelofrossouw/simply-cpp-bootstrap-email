@@ -1,0 +1,12 @@
+simply-cpp-bootstrap-email
+Copyright 2026 Roelof Rossouw
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This product includes:
+- bootstrap-email 1.8.1 (https://github.com/bootstrap-email/bootstrap-email), MIT licence, Copyright 2017 - Present
+  Stuart Yamartino: its stylesheets, templates and layout (third_party/bootstrap-email), and its compiler ported to C++.
+- premailer 1.27 and css_parser 1.22 (https://github.com/premailer), BSD-3-Clause and MIT, ported to C++.
+- htmlbeautifier 1.4 (https://github.com/threedaymonkey/htmlbeautifier), MIT, ported to C++.
+- lexbor 3.0.0 (https://github.com/lexbor/lexbor), Apache License 2.0, Copyright 2018-2026 Alexander Borisov:
+  third_party/lexbor (see its LICENSE and NOTICE).

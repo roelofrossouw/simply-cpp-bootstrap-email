@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Components</title>
+</head>
+<body class="bg-light">
+  <preview>Your order shipped</preview>
+  <div class="container">
+    <img class="ax-center my-10" width="48" height="48" src="https://example.com/logo.png" alt="Logo">
+    <div class="card p-6 p-lg-10 space-y-4">
+      <h1 class="h3 text-700">Hello, world</h1>
+      <p class="text-gray-700">A paragraph with <strong>bold</strong> and <a href="https://example.com/a?x=1&amp;y=2">a link</a>.</p>
+      <a class="btn btn-primary p-3 fw-700" href="https://example.com/{{ order.id }}">Primary</a>
+      <a class="btn btn-outline-secondary btn-sm" href="#">Small outline</a>
+      <span class="badge bg-success rounded-full">Badge</span>
+      <div class="alert alert-warning">Careful now</div>
+      <hr>
+      <hr class="my-2">
+      <div class="row">
+        <div class="col-6">Left half</div>
+        <div class="col-6 text-right">Right half</div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">One</div>
+        <div class="col-lg-8">Two</div>
+      </div>
+      <div class="stack-row"><div>A</div><div>B</div></div>
+      <div class="stack-col"><div>C</div><div>D</div></div>
+      <div class="bg-primary text-white p-4">Coloured block</div>
+      <div class="s-6"></div>
+      <div class="mt-4 mb-2 pt-3 px-2">Margins and padding</div>
+      <block class="bg-gray-200">A block</block>
+      <div class="to-table ax-right">Right aligned</div>
+      <table class="table"><tr><td class="text-center">Cell</td></tr></table>
+      <p style="color: red; margin: 1px 2px">Inline style wins</p>
+      <p>Non-ASCII: café, “quotes”, ellipsis…, non breaking&nbsp;space, emoji 😀.</p>
+    </div>
+    <div class="container-fluid"><p>Fluid</p></div>
+  </div>
+</body>
+</html>
