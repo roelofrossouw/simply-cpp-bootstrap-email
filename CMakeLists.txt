@@ -9,7 +9,7 @@ get_sc_version()
 message(STATUS "SimplyCPP ${SC_MODULE} Version: ${SC_VERSION}")
 
 # sc::params for the bootstrap-email program.
-find_or_install_package(sc-core simply-cpp-dev simply-cpp 1.26.0)
+find_or_install_package(sc-core simply-cpp-dev simply-cpp 2.2.0)
 
 set(SOURCE_OBJECTS)
 set(SOURCE_LIBRARIES)

@@ -10,7 +10,7 @@ in a process (reading the stylesheet).
 **Documentation:** the [simply-cpp wiki](https://github.com/roelofrossouw/simply-cpp/wiki) has the [sc-bootstrap-email reference](https://github.com/roelofrossouw/simply-cpp/wiki/Reference-sc-bootstrap-email).
 
 ```cpp
-#include <sc_bootstrap_email.h>
+#include <sc/bootstrap-email/sc_bootstrap_email.h>
 
 const std::string email = sc::bootstrap_email::compile(R"(
     <body class="bg-light">
