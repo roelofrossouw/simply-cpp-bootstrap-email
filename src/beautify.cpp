@@ -209,6 +209,7 @@ namespace sc::bootstrap_email {
             return std::nullopt;
         }
 
+        // sc-core has no trim(); css.cpp's strip() is the same, for its own file
         std::string trim(std::string_view s) {
             const auto first = s.find_first_not_of(" \t\n\r\f\v");
             if (first == std::string_view::npos) {

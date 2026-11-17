@@ -4,6 +4,8 @@
 
 #include "css.h"
 
+#include <sc/core/core.h>
+
 #include <algorithm>
 #include <cctype>
 #include <map>
@@ -22,13 +24,7 @@ namespace sc::bootstrap_email::css {
             return std::string(s.substr(first, s.find_last_not_of(" \t\n\r\f\v") - first + 1));
         }
 
-        std::string lower(std::string_view s) {
-            std::string out(s);
-            std::ranges::transform(out, out.begin(), [](const unsigned char c) { return static_cast<char>(std::tolower(c)); });
-            return out;
-        }
-
-        std::string normalize(std::string_view property) { return lower(strip(property)); }
+        std::string normalize(std::string_view property) { return sc::lowercase(strip(property)); }
 
         // Ruby's String#slice!(regex): takes the first match out of s, and returns it
         std::optional<std::string> slice(std::string &s, const regex &re) {
@@ -213,7 +209,7 @@ namespace sc::bootstrap_email::css {
         // The first \s*!important\b\s*, in any case
         bool important = false;
         for (std::size_t at = text.find('!'); at != std::string::npos; at = text.find('!', at + 1)) {
-            if (lower(std::string_view(text).substr(at, 10)) == "!important" &&
+            if (sc::lowercase(std::string_view(text).substr(at, 10)) == "!important" &&
                 (at + 10 == text.size() || !(std::isalnum(static_cast<unsigned char>(text[at + 10])) || text[at + 10] == '_'))) {
                 std::size_t start = at, end = at + 10;
                 while (start > 0 && std::isspace(static_cast<unsigned char>(text[start - 1]))) {
@@ -644,7 +640,7 @@ namespace sc::bootstrap_email::css {
             }
             const std::string property = strip(std::string_view(piece).substr(0, colon));
             const std::string text = strip(std::string_view(piece).substr(colon + 1));
-            if (property.empty() || text.empty() || lower(text) == "!important") {
+            if (property.empty() || text.empty() || sc::lowercase(text) == "!important") {
                 continue;
             }
             parsed.set(property, text);
@@ -799,7 +795,7 @@ namespace sc::bootstrap_email::css {
                     selectors.clear();
                     block.clear();
                 }
-            } else if (lower(token).find("@media") != std::string::npos) {
+            } else if (sc::lowercase(token).find("@media") != std::string::npos) {
                 in_at_media = true;
                 media.clear();
             } else if (in_at_media) {
@@ -826,7 +822,7 @@ namespace sc::bootstrap_email::css {
                         query += token + " ";
                     }
                 }
-            } else if (in_charset || lower(token).find("@charset") != std::string::npos) {
+            } else if (in_charset || sc::lowercase(token).find("@charset") != std::string::npos) {
                 in_charset = token.find(';') == std::string::npos;
             } else if (!in_string && token.find('}') != std::string::npos) {
                 if (in_media_block) {
