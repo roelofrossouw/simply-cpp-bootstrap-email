@@ -46,14 +46,14 @@ add_custom_command(OUTPUT ${BOOTSTRAP_EMAIL_RESOURCES_CPP}
         DEPENDS ${BOOTSTRAP_EMAIL_RESOURCES} ${CMAKE_CURRENT_SOURCE_DIR}/cmake/embed_resources.cmake
         COMMENT "Embedding bootstrap-email's stylesheets and templates")
 
-add_sc_object(sc_bootstrap_email
+add_sc_object(bootstrap_email
         SOURCES src/css.cpp src/css.h src/dom.cpp src/dom.h src/inliner.cpp src/inliner.h
                 src/converters.cpp src/converters.h src/beautify.cpp src/beautify.h src/resources.h
                 ${BOOTSTRAP_EMAIL_RESOURCES_CPP}
         INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/src ${LEXBOR_DIR}
         LINK_LIBRARIES sc::sc-core
         PUBLIC_LINK_LIBRARIES sc::sc-core)
-target_compile_definitions(sc-obj-sc_bootstrap_email PRIVATE LEXBOR_STATIC)
+target_compile_definitions(sc-obj-bootstrap_email PRIVATE LEXBOR_STATIC)
 
 add_sc_libraries(DESCRIPTION "simply-cpp bootstrap-email: Bootstrap HTML made into email-safe HTML, a C++ port of bootstrap-email")
 target_compile_features(sc-bootstrap-email PUBLIC cxx_std_20)

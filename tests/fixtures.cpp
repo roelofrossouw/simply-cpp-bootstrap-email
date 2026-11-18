@@ -4,7 +4,7 @@
 
 #include "sc_test.h"
 
-#include <sc/bootstrap-email/sc_bootstrap_email.h>
+#include <sc/bootstrap-email/bootstrap_email.h>
 
 #include <filesystem>
 #include <fstream>

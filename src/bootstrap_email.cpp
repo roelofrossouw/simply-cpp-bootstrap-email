@@ -1,7 +1,7 @@
 // bootstrap-email's Compiler (lib/bootstrap-email/compiler.rb): the layout when the HTML has no head, premailer's
 // document with the stylesheet, the converters, the inlining, the head, and the finishing touches to the text.
 
-#include <sc/bootstrap-email/sc_bootstrap_email.h>
+#include <sc/bootstrap-email/bootstrap_email.h>
 
 #include "beautify.h"
 #include "converters.h"

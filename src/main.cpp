@@ -1,7 +1,7 @@
 // bootstrap-email, the program: an email's Bootstrap HTML, from a file, --string or standard input, as email HTML on
 // standard output, as the Ruby gem's command gives it.
 
-#include <sc/bootstrap-email/sc_bootstrap_email.h>
+#include <sc/bootstrap-email/bootstrap_email.h>
 
 #include <sc/core/params.h>
 
